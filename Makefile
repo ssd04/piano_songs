@@ -5,9 +5,6 @@
 
 f = main
 
-setup:
-	mkdir -p images
-
 run:
 	latexmk ${f}.tex
 
@@ -19,8 +16,5 @@ html:
 	htlatex ${f}.tex
 
 install_deps:
-	sudo apt-get install biber \
-		texlive-bibtex-extra \
-		texlive-latex-extra \
-		texlive-xetex \
-		texlive-science
+	sudo apt-get install \
+		zathura
